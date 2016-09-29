@@ -1,0 +1,43 @@
+{
+  "name": "node-adodb",
+  "version": "2.0.3",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "sql",
+    "adodb",
+    "access",
+    "database",
+    "node-adodb",
+    "microsoft adodb"
+  ],
+  "homepage": "https://github.com/nuintun/node-adodb",
+  "description": "A Node.js JavaScript Client implementing the ADODB protocol .",
+  "author": {
+    "name": "nuintun",
+    "email": "<nuintun@qq.com>"
+  },
+  "bugs": {
+    "url": "https://github.com/nuintun/node-adodb/issues",
+    "email": "nuintun@qq.com"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuintun/node-adodb.git"
+  },
+  "dependencies": {
+    "colors": "^1.1.2"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1"
+  },
+  "readmeFilename": "README.md",
+  "scripts": {
+    "test": "mocha --check-leaks --reporter spec --bail",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot"
+  }
+}

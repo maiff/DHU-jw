@@ -1,0 +1,296 @@
+
+
+
+<html>
+<head>
+    <title>
+        学生查看自己的选课情况
+    </title>
+    <script language="javascript">
+        function dodelmatriculate(classno,coursecode){
+            if(confirm("确定要删除该课程！")){
+                location.href = "../../servlet/com.collegesoft.eduadmin.tables.selectcourse.SelectCourseController?classNo="
+                        +classno+"&courseId="+coursecode+"&doWhat=deletematriculatedcourse";
+            }else{
+                return;
+            }
+        }
+        function dodelselect(courseno){
+            if(confirm("确定要删除该课程!")){
+                location.href = "../../servlet/com.collegesoft.eduadmin.tables.selectcourse.SelectCourseController?courseNo="
+                        +courseno+"&doWhat=deleteselectedcourse";
+            }else{
+                return;
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../pub/page.css">
+    <style>
+        td,caption{font-size:10pt;text-align:center}
+        .nav{background:url('/dhu/news/images/news_bg2.gif');color:white}
+        .nav A{color:white}
+        .nav A:hover{color:white}
+        A{color:darkblue;text-decoration:none}
+        A:hover{color:red;text-decoration:underline}
+    </style>
+</head>
+
+<body LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 onload="init1();init2()">
+    
+<div align="center"><image src="images/xk.gif"></div>
+<table width="778" align="center" class="nav">
+    <tr><td style="text-align:left">&nbsp;&nbsp;您现在的位置：<a href="/dhu">教务处主页</a>&gt;&gt;<a href="/dhu/student">学生主页</a>&gt;&gt;查看选课结果</td></tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
+       bordercolor="#111111" width="770" height="30" align="center">
+    <tr><td width="100%" height="35" valign="bottom">
+        <font size=2 face='宋体' color=red>
+            </font>
+        同学(141320231)的
+        <font color="blue">已被录取</font>
+        的课程如下。若要查看课程详细信息,请点击课程名称。
+        (共<span id="count" style="font-weight:bold"></span>门课程,<span id="count0"  style="font-weight:bold"></span>学分)
+
+        <!--OBJECT classid=CLSID:8856F961-340A-11D0-A96B-00C04FD705A2 height=13 id=WebBrowser width=18-->
+        </OBJECT>
+        <caption valign="bottom" style="text-align:right">选课学期：2016-2017学年 第 1 学期</caption>
+</table>
+<body>
+
+<table width="900" border=1 cellspacing="0" style="border-collapse: collapse"
+       bordercolor="#111111" cellpadding="1" align="center">
+
+    <tr><th bgcolor='#D3E8FD' width="60" height="20"><span style="font-weight: 400"><font face="宋体" size="2">
+        课程代码 </font> </span>
+        <th bgcolor='#D3E8FD' width="200" height="20"><span style="font-weight: 400"><font face="宋体" size="2">课程名称 </font></span>
+        <th bgcolor='#D3E8FD' width="50" height="20"><span style="font-weight: 400"><font face="宋体" size="2">学分 </font></span>
+        <th bgcolor='#D3E8FD' width="100" height="20"><span style="font-weight: 400"><font face="宋体" size="2">课程类别 </font></span>
+        <th bgcolor='#D3E8FD' width="60" height="20"><span style="font-weight: 400"><font face="宋体" size="2">组班序号</font></span>
+        <th bgcolor='#D3E8FD' width="60" height="20"><span style="font-weight: 400"><font size="2" face="宋体">教学日历</font></span>
+                
+        <th bgcolor='#D3E8FD' width="70" height="20"><span style="font-weight: 400">
+        <font face="宋体" size="2">任课教师 </font></span>
+        <th bgcolor='#D3E8FD' width="90" height="20" ><span style="font-weight: 400">
+        <font face="宋体" width="100"size="2">上课周次 </font>  </span>
+        <th bgcolor='#D3E8FD' width=100 height="20"><font face="宋体" size="2"><span style="font-weight: 400">    上课时间 </span>
+            <th bgcolor='#D3E8FD' width=90 height="20"><font face="宋体" size="2"><span style="font-weight: 400">    上课地点 </span>
+    </tr>
+    <tr><td>020023</td>
+<td><a href="/dhu/ftp/02/020023DG.htm" target="_blank">形势与政策(3)</a></td>
+<td>1.0</td>
+<td>
+通识教育
+</td>
+<td>8</td>
+<td><a href="/dhu/ftp/02/020023RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10145339  " target="_blank">贺羡</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">2—7周</td><td width="100">周三.5.6节</td><td width="100">松1101          </td></tr>
+</table></td></tr>
+<tr><td>030651</td>
+<td><a href="/dhu/ftp/03/030651DG.htm" target="_blank">高尔夫(初级)</a></td>
+<td>2.0</td>
+<td>
+通识教育
+</td>
+<td>4</td>
+<td><a href="/dhu//ftp/03\030651rl.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10155084  " target="_blank">俞东寿</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">1—16周</td><td width="100">周四.3.4节</td><td width="100">松江校区体育馆</td></tr>
+</table></td></tr>
+<tr><td>130153</td>
+<td><a href="/dhu/ftp/13/130153DG.htm" target="_blank">计算机网络</a></td>
+<td>3.5</td>
+<td>
+学科基础
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/130153RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10103643  " target="_blank">朱明</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">1—16周</td><td width="100">周二.3.4节</td><td width="100">松1442          </td></tr>
+<tr><td width="100">1—16周</td><td width="100">周五.1.2节</td><td width="100">松1442          </td></tr>
+</table></td></tr>
+<tr><td>130163</td>
+<td><a href="/dhu/ftp/13/130163DG.htm" target="_blank">软件工程导论</a></td>
+<td>3.0</td>
+<td>
+学科基础
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/130163RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10216301  " target="_blank">石秀金</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">1—16周</td><td width="100">周四.5.6.7节</td><td width="100">松1442          </td></tr>
+</table></td></tr>
+<tr><td>130191</td>
+<td><a href="/dhu/ftp/13/130191DG.htm" target="_blank">计算机图形学</a></td>
+<td>2.0</td>
+<td>
+学科基础
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/130191RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10105091  " target="_blank">蔡棽</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">1—8周</td><td width="100">周一.10.11节</td><td width="100">松1442          </td></tr>
+<tr><td width="100">1—8周</td><td width="100">周五.5.6节</td><td width="100">松1442          </td></tr>
+</table></td></tr>
+<tr><td>130241</td>
+<td><a href="/dhu/ftp/13/130241DG.htm" target="_blank">多媒体技术</a></td>
+<td>2.0</td>
+<td>
+学科基础
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/130241RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10105140  " target="_blank">卢婷</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">9—16周</td><td width="100">周一.5.6节</td><td width="100">松1442          </td></tr>
+<tr><td width="100">9—16周</td><td width="100">周四.1.2节</td><td width="100">松1442          </td></tr>
+</table></td></tr>
+<tr><td>130271</td>
+<td><a href="/dhu/ftp/13/130271DG.htm" target="_blank">LINUX系统</a></td>
+<td>2.0</td>
+<td>
+专业方向
+</td>
+<td>2</td>
+<td><a href="/dhu/ftp/13/130271RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10104806  " target="_blank">罗辛</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">9—16周</td><td width="100">周三.5.6节</td><td width="100">松1446          </td></tr>
+<tr><td width="100">9—16周</td><td width="100">周五.3.4节</td><td width="100">松1446          </td></tr>
+</table></td></tr>
+<tr><td>130661</td>
+<td><a href="/dhu/ftp/13/130661DG.htm" target="_blank">软件测试与度量</a></td>
+<td>2.0</td>
+<td>
+专业方向
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/130661RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10104220  " target="_blank">姚砺</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">1—8周</td><td width="100">周一.3.4节</td><td width="100">松1442          </td></tr>
+<tr><td width="100">1—8周</td><td width="100">周三.1.2节</td><td width="100">松1442          </td></tr>
+</table></td></tr>
+<tr><td>131211</td>
+<td><a href="/dhu/ftp/13/131211DG.htm" target="_blank">工程项目管理</a></td>
+<td>2.0</td>
+<td>
+学科基础
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/131211RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10104543  " target="_blank">吴国文</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">9—16周</td><td width="100">周一.3.4节</td><td width="100">松1442          </td></tr>
+<tr><td width="100">9—16周</td><td width="100">周三.1.2节</td><td width="100">松1442          </td></tr>
+</table></td></tr>
+<tr><td>131301</td>
+<td><a href="/dhu/ftp/13/131301DG.htm" target="_blank">创新思维与方法</a></td>
+<td>2.0</td>
+<td>
+学科基础
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/131301RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10104403  " target="_blank">李锋</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">1—16周</td><td width="100">周一.7.8节</td><td width="100">松1442          </td></tr>
+</table></td></tr>
+<tr><td>131441</td>
+<td><a href="/dhu/ftp/13/131441DG.htm" target="_blank">专业英语</a></td>
+<td>2.0</td>
+<td>
+学科基础
+</td>
+<td>2</td>
+<td><a href="/dhu/ftp/13/131441RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10103766  " target="_blank">李继云</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+<tr><td width="100">1—16周</td><td width="100">周二.10.11节</td><td width="100">松1446          </td></tr>
+</table></td></tr>
+<tr><td>139931</td>
+<td><a href="/dhu/ftp/13/139931DG.htm" target="_blank">软件测试课程设计</a></td>
+<td>2.0</td>
+<td>
+实践教学
+</td>
+<td>1</td>
+<td><a href="/dhu/ftp/13/139931RL.htm" target="_blank">教学日历</a></td>
+<td><a href="../../admin/selectcourse/teacherinfo.jsp?teacherId=10104220  " target="_blank">姚砺</a></td>
+<td colspan=3 height=100% align="center" width=300>
+
+<table border=1 bordercolor="#FFFFD0"  width=300 height=100% frame=void cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" align="right">
+</table></td></tr>
+<script type="text/javascript">
+function init1(){
+count.innerText="12";
+count0.innerText="25.5";
+}
+</script>
+
+</table>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
+       bordercolor="#111111" width="770" align="center">
+    <tr><td width="100%"><font size="2" color="red"></font><font size="2">同学<font color="blue">第一次选课志愿</font>：(共<b><span id=count2></span></b>门课,<b><span id=count3></span></b>学分)</font>
+        </font>
+</table>
+<table width="899" border=1 cellspacing="0" style="border-collapse: collapse"
+       bordercolor="#111111" cellpadding="2" align="center">
+    <tr ><th bgcolor='#DEE9E9' width="57" height="20"><span style="font-weight: 400"><font face="宋体" size="2">
+        课程代码 </font> </span>
+        <th bgcolor='#DEE9E9' width="185" height="20"><span style="font-weight: 400"><font face="宋体" size="2">课程名称</font></span>
+        <th bgcolor='#DEE9E9' width="20" height="20"><span style="font-weight: 400"><font face="宋体" size="2">学分</font></span>
+        <th bgcolor='#DEE9E9' width="105"><span style="font-weight: 400"><font face="宋体" size="2">优选专业</font></span></th>
+        <th bgcolor='#DEE9E9' width="60" height="20"><span style="font-weight: 400"><font face="宋体" size="2">课程类别</font></span>
+        <th bgcolor='#DEE9E9' width="34" height="20"><span style="font-weight: 400"><font face="宋体" size="2">组班序号</font></span>
+
+        <th bgcolor='#DEE9E9' width="60" height="20"><span style="font-weight: 400"><font size="2" face="宋体">教学日历</font></span>
+                
+        <th bgcolor='#DEE9E9' width="30" height="20"><span style="font-weight: 400">
+             <font face="宋体" size="2">是否录取 </font>  </span>
+        <th bgcolor='#DEE9E9' width="60" height="20"><span style="font-weight: 400">
+            <font face="宋体" size="2">任课教师 </font></span>
+        <th bgcolor='#DEE9E9' width="60" height="20" ><span style="font-weight: 400">
+            <font face="宋体" size="2">上课周次 </font>  </span>
+        <th bgcolor='#DEE9E9' width=70 height="20"><font face="宋体" size="2"><span style="font-weight: 400">    上课时间 </span>
+            <th bgcolor='#DEE9E9' width=70 height="20"><font face="宋体" size="2"><span style="font-weight: 400">    上课地点 </span>
+    </tr>
+        <script type="text/javascript">
+function init2(){
+count2.innerText="0";
+count3.innerText="0.0";
+}
+</script>
+<tr><td colspan="11" height="200"><font color="red">没有未录的取选课记录！</font></td></tr>
+
+    <script language="JavaScript" src="../../bottom.js" ></script>
+</body>
+</html>
