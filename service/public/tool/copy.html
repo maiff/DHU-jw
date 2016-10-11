@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同步</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<style type="text/css">
+		.update-warp{
+			text-align: center;
+    		border: 1px solid #aaa;
+    		padding: 10px;
+		    border-radius: 5px;
+		}
+		input[type="text"]{
+			width: 60%;
+			height: 25px;
+			/* border: 1px solid; */
+			border-radius: 5px;
+			border: 1px solid #aaa;
+			outline: none;
+		}
+		input[type="text"]:focus{
+			border: 1px solid #259dff;
+		}
+		.item{
+		    padding: 10px;
+		    margin-top: 10px;
+		    border: 1px solid #259dff;
+		    border-radius: 5px;			
+		}
+		.item,.content{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div class="update-warp">
+	
+		<input type="text" placeholder="请输入同步内容～">
+		<button >同步</button>
+	
+
+</div>
+
+<div class="content-warp">
+
+</div>
+
+	
+</body>
+<script src="../public/output_js/test.js"></script>
+<script type="text/javascript">
+	function ajax(url,fn,methon,send){
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				fn(xhr.responseText);
+				console.log(this.HEADERS_RECEIVED)
+			}
+			if(this.readyState == this.HEADERS_RECEIVED) {
+    		console.log(xhr.getAllResponseHeaders());
+  }
+		}
+		xhr.open(methon||'GET', url, true);
+		xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+
+		xhr.send(send||null);
+	}
+</script>
+<script type="text/javascript" src="copy/copy.js"></script>
+<script type="text/javascript">
+	document.querySelector('.content-warp').addEventListener('click',function(e){
+		var event=e||window.event;
+		var target=event.target;
+		if(target.nodeName=='P'){
+			copy(target);
+		}else
+			copy(target.querySelector('p'));
+		
+		//console.log(target.nodeName)
+	})
+	function getInformation(){
+		ajax('/copyGet',function(data){
+			//console.log(1);
+			var data=JSON.parse(data).reverse()
+			var str='';
+			for(var i=0;i<data.length;i++){
+				str+=('<div class="item">'+'<p class="content">'+data[i].content+'</p></div>')
+			}
+			document.querySelector('.content-warp').innerHTML=str;
+		})
+		// $.ajax({
+		// 	type:'get',
+		// 	url:'/copyGet',
+		// 	// dataType:'json',
+		// 	success:function(data){
+		// 	console.log(typeof data);
+		// 	console.log(data.t)
+		// }
+		// })
+	}
+	getInformation();
+	var input=document.getElementsByTagName('input')[0]
+	document.getElementsByTagName('button')[0].addEventListener('click',function(){
+		if(input.value==''){
+
+		}else{
+			ajax('/copySave',function(data){
+				console.log(data);
+				console.log(typeof data);
+				getInformation();
+			},'POST','content='+input.value)
+		}
+	})
+</script>
+</html>

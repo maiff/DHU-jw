@@ -40,7 +40,7 @@ var getDown=(
 		$('#deail-search').click(function(){
 			tool.loadingShow();
 			$.post('./byKeyGetDetail',{q:$('#detail_key').val()},function(data){
-				console.log(data);
+				console.log(typeof data);
 				var liList=$('.down-collection');
 				if(data.length!=0){
 					liList.html('');
@@ -62,7 +62,7 @@ var getDown=(
 		})
 		function getDownAndSetTr(){
 			$.get("/getDownCatalog", function(data){
-				  console.log( data);
+				  console.log(typeof data);
 				  var liList=$('.down-collection');
 				  var len=data.length;
 				  for(var i=0;i<len;i++){

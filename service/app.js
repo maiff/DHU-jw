@@ -22,11 +22,12 @@ var getDownCatalog=require('./routes/getDownCatalog');
 //var postShare=require('./routes/postShare');
 //var postContact=require('./routes/postContact');
 //var getStuInfo=require('./routes/getStuInfo');
-
+var copyGet=require('./routes/tool/copyGet');
+var copySave=require('./routes/tool/copySave');
 
 var app = express();
 
-app.use(require('prerender-node').set('prerenderToken', '7fhEukZowRwXaM8rKgkh'));
+//app.use(require('prerender-node').set('prerenderToken', '7fhEukZowRwXaM8rKgkh'));
 //console.log(__dirname)
 app.use(express.static(__dirname + '/public'));
 app.use('/home', routes);
@@ -50,7 +51,8 @@ app.use('/getDownCatalog',getDownCatalog);
 //app.use('/getStuInfo',getStuInfo);
 
 // catch 404 and forward to error handler
-
+app.use('/copyGet',copyGet);
+app.use('/copySave',copySave);
 
 // error handlers
 
